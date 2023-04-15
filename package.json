@@ -5,6 +5,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "export": "next export",
+    "deploy": "next build && next export && touch out/.nojekyll && gh-pages -d out",
     "start": "next start",
     "lint": "next lint"
   },
@@ -12,5 +14,8 @@
     "next": "13.3.0",
     "react": "18.2.0",
     "react-dom": "18.2.0"
+  },
+  "devDependencies": {
+    "gh-pages": "^5.0.0"
   }
 }
