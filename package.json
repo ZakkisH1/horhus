@@ -2,6 +2,7 @@
   "name": "horhus",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://zakkish1.github.io/horhus/",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
