@@ -1,5 +1,6 @@
 import { useRouter } from 'next/router';
-let namn = "Hejdåå"
+import styles from '../styles/Button.module.css'
+let namn = <h1>Shalom</h1>
 
 function Shafka(){
   const router = useRouter();
@@ -8,7 +9,7 @@ function Shafka(){
   }
   
   return(
-    <button onClick={handle}>
+    <button className={styles.button} onClick={handle}>
       Shafka
     </button>
 
@@ -22,38 +23,30 @@ function Waabka(){
   }
 
   return (
-    <button onClick={handle}>
+    <button className={styles.button} onClick={handle}>
       Waabka
     </button>
   )
 }
 
-const butts = [
-  <Shafka />,
-  <Waabka />
-]
-
-const options = butts.map(butt =>
-  <li>
-    {butt}
-  </li>
- );
-
 
 function Home(){
   return(
-
     <div>
-      {namn}
+
+      <div className={styles.head}>
+        {namn}
+      </div>
+
+      <div className={styles.container}>
+        <br /> {/*makes new line*/}
+
+        <Shafka />
+        <Waabka />
+      </div>
 
 
-      <br /> {/*makes new line*/}
-
-      <ul>{options}</ul>
     </div>
-    
-
-
   )
 }
 
