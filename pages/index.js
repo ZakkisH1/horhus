@@ -46,6 +46,7 @@ function Home(){
     <div>
       {namn}
 
+
       <br /> {/*makes new line*/}
 
       <ul>{options}</ul>
